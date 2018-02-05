@@ -1,0 +1,22 @@
+﻿@model Login_Front.Models.LoginModel
+
+<div>
+    <div>Login Form</div>
+    <form onsubmit="" method="post" action="/Account/SignIn">
+        <div id="username">
+            <span>Username</span>
+
+            <span> @Html.TextBoxFor(p => p.Username) </span>
+        </div>
+
+        <div id="password">
+            <span>Password</span>
+
+            <span> @Html.PasswordFor(p => p.Password) </span>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        @Html.HiddenFor(p => p.LineUserId)
+    </form>
+</div>
